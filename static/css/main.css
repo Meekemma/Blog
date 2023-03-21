@@ -1,0 +1,138 @@
+body{
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 12px;
+    line-height: 1.6;
+    background:  #002244;
+    color: bisque;
+}
+h1,
+h2,
+h3,
+h4 {
+	color: #fff;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
+p {
+	margin: 0.5rem 0;
+}
+
+img {
+	width: 100%;
+	
+}
+
+textarea {
+	width: 100%;
+	height: 150px;
+	background-color: rgb(5, 51, 66);
+	color: white;
+	padding: 12px 20px;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	resize: none;
+}
+.down{
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: #0039a6;
+}
+.showcase{
+	width: 100%;
+	height: 90vh;
+	position: relative;
+    background: url(https://images.pexels.com/photos/1644889/pexels-photo-1644889.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) no-repeat center center/cover;
+}
+
+.showcase::after{
+	content: '';
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background: rgba(0, 0, 0, 0.6);
+}
+
+.showcase-content{
+	position: relative;
+	z-index: 2;
+	margin: auto;
+	display:flex ;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	justify-content:center;
+	align-items: center;
+	text-align: center;
+}
+.showcase-content form{
+    color:#FFFAFA;
+	line-height: 1.1;
+	margin-top: 350px;
+    width: 100%;
+}
+
+input[type=search]{
+    background: transparent ;
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: #FFFAFA solid 1px;
+}
+input[type=search]:hover{
+    background: #FFFAFA;
+}
+::placeholder{
+    color: #FFFAFA;
+}
+.search-button{
+    padding: 9px;
+    font-size: 16px;
+
+}
+.search-button:hover{
+    background: #FFFAFA;
+}
+.showcase-content p{
+	text-transform: uppercase;
+	color: #fff;
+	font-weight: 400;
+	font-size: 1.9rem;
+	height: 1.25;
+	margin: 0 0 2rem;
+}
+.card-1{
+    background: #1d1025;
+    border-right-color: #fff;
+    border-width: 2px;
+	box-shadow: 10px 10px 5px lightblue;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	
+}
+.comment{
+	border-bottom:  rgb(5, 51, 66) 0.5px solid;
+}
+.hello-msg{
+    font-size: 18px;
+    color: #fff;
+    margin-right: 20px;
+}
+
+.image-thumbail{
+    height: 200px;
+    object-fit:cover ;
+}
+.page{
+	color: #000000;
+}
+
+
