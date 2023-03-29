@@ -5,6 +5,13 @@ from django.urls import reverse
 
 
 # Create your models here.
+class Category(models.Model):
+    name=models.CharField(max_length=200, blank=True, null=True)
+
+    def __str__(self):
+         return self.name
+    
+   
 
 
 STATUS = (
@@ -13,6 +20,7 @@ STATUS = (
 )
 
 class Post(models.Model):
+    category=models.ForeignKey(Category, on_delete=models.SET_NULL, blank=True, null=True)
     title=models.CharField(max_length=200, unique=True)
     slug=models.SlugField(max_length=200, unique=True)
     author=models.CharField(max_length=200, blank=True, null=True)

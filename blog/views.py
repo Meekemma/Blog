@@ -55,15 +55,16 @@ def logoutUser(request):
 
 
 def PostList(request):
-	search= request.GET.get('search', None)
-	items= ''
-	if search is None or search is "":
-		posts=Post.objects.filter(status=1)
-	elif search is not None:
-		posts = Post.objects.filter(title__icontains=search)	
+	search= request.GET.get('search')
+	category = request.GET.get('category')
+	
+	if category == None:
+		posts=Post.objects.filter(status=1)		
+	else:	
+		posts = Post.objects.filter(category__name=category)					
 
 	
-
+	categories= Category.objects.all()
 	#Paginator
 	page = request.GET.get('page')
 	paginator=Paginator(posts, 6)
@@ -76,7 +77,7 @@ def PostList(request):
 		posts = paginator.page(paginator.num_pages)
 
 
-	context={'posts':posts, }
+	context={'posts':posts, 'categories':categories }
 	return render(request, 'blog/index.html', context)
 
 
